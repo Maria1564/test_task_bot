@@ -1,0 +1,32 @@
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   height: 100%;
+}
+
+.modal {
+    width: 459px;
+    padding: 20px;
+    background-color: var(--bg-modal);
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+}
+
+.top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.btn_close {
+    background-color: transparent;
+    box-shadow: none;
+}
+
