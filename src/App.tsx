@@ -1,25 +1,35 @@
-import { useEffect } from 'react'
 
-import { Route, Routes, useNavigate } from 'react-router'
-import Login from './components/Login'
+import { Navigate, Route, Routes } from "react-router";
+import Login from "./components/Login";
+import Dashboard from "./components/Dashboard/Dashboard";
+import { useEffect, useState } from "react";
 
 function App(): React.ReactElement {
-
-  const navigate = useNavigate()
+  const [isAuth, setIsAuth] = useState(false)
 
   useEffect(()=> {
-    // axios.post("/chat", {name: 'kashtan'})
-    // .then(res => console.log(res.data))
-    if(!localStorage.getItem("login")) navigate("/login", {replace: true})
-  }, [navigate])
+    setIsAuth(Boolean(localStorage.getItem("login")))
+  }, [])
 
+  
   return (
     <>
-     <Routes>
-      <Route path="/login" element={<Login/>}/>
-     </Routes>
+      <Routes>
+        <Route
+          path="/"
+          element={
+            isAuth ? (
+              <Navigate to="/dashboard" replace />
+            ) : (
+              <Navigate to="/login" replace />
+            )
+          }
+        />
+        <Route path="/login" element={<Login />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
