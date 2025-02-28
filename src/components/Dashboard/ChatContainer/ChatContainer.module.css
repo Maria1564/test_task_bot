@@ -1,0 +1,21 @@
+.chat {
+    background-color: var(--color-primary);
+    flex-grow: 1;
+    border-radius: 18px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 8px;
+}
+
+.messages {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.field {
+    height: 120px;
+    background-color: blue;
+}

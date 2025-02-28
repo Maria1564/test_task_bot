@@ -1,0 +1,8 @@
+.mess_assist {
+    color: red;
+}
+
+.mess_user {
+    align-self: flex-end;
+    color: blue;
+}
