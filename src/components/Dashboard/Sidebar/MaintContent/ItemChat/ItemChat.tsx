@@ -1,14 +1,17 @@
 import React from 'react'
 import { IChat } from '../../../../../types'
 import style from "./ItemChat.module.css"
-import iconTrash from "../../../../../assets/trash.png"
-import iconChat from "../../../../../assets/sidebar-chat.png"
+import { ReactComponent as IconTrash } from '../../../../../assets/trash.svg';
+import {ReactComponent as IconChat} from "../../../../../assets/sidebar-chat.svg"
 import { useChatsStore } from '../../../../../store/chatStore'
+import { NavLink } from 'react-router'
 
 type ItemChatProps = {
     chat: IChat
 }
 
+
+const isActiveLink = ({isActive}: {isActive: boolean}) => (isActive ? style.active_link : "") 
 const ItemChat: React.FC<ItemChatProps> = ({chat}) => {
 
   const deleteChat = useChatsStore(state => state.deleteChat)
@@ -19,13 +22,12 @@ const ItemChat: React.FC<ItemChatProps> = ({chat}) => {
 
   return (
     <div className={style.item_chat}>
-      <div className={style.text}>
-        <img src={iconChat} alt="icon chat" />
+      <NavLink to={`chat/${chat.id}`} className={(props) => `${isActiveLink(props)} ${style.text}`}>
+        <IconChat className={style.icon_chat}/>
         {chat.nameChat}
-      </div>
-        <button className={style.btn_delete} onClick={deleteChatById}>
-          <img src={iconTrash} alt="icon trash" />
-        </button>
+      </NavLink>
+      
+        <IconTrash className={style.btn_delete} onClick={deleteChatById}/>
       </div>
   )
 }

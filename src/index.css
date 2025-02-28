@@ -47,3 +47,7 @@ button {
 input::placeholder {
   color: var(--placeholder-color);
 }
+
+a {
+  text-decoration: none;
+}

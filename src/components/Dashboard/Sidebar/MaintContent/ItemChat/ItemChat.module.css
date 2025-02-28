@@ -11,9 +11,31 @@
     gap: 8px;
     cursor: pointer;
     color: #9d9fa3;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.icon_chat > path {
+    stroke: #323a4f;;
 }
 
 .btn_delete {
     box-shadow: none;
     background-color: transparent
 }
+
+.btn_delete > path {
+    fill: #323a4f;
+}
+
+.active_link {
+    color: var(--text-color);
+}
+
+.active_link .icon_chat > path {
+ stroke: #616d8d;
+}
+
+.item_chat .active_link + .btn_delete > path {
+    fill: #616d8d;
+  } 

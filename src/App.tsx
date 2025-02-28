@@ -3,6 +3,7 @@ import { Navigate, Route, Routes } from "react-router";
 import Login from "./components/Login";
 import Dashboard from "./components/Dashboard/Dashboard";
 import { useEffect, useState } from "react";
+import ChatContainer from "./components/Dashboard/ChatContainer";
 
 function App(): React.ReactElement {
   const [isAuth, setIsAuth] = useState(false)
@@ -25,7 +26,9 @@ function App(): React.ReactElement {
           }
         />
         <Route path="/login" element={<Login />} />
-        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/dashboard/" element={<Dashboard />} > 
+          <Route path="chat/:id" element={<ChatContainer/>}/>
+        </Route>
       </Routes>
     </>
   );
