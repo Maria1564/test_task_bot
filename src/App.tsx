@@ -10,7 +10,6 @@ function App(): React.ReactElement {
   useEffect(()=> {
     setIsAuth(Boolean(localStorage.getItem("login")))
   }, [])
-
   
   return (
     <>

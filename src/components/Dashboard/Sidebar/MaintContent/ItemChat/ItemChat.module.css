@@ -1,0 +1,19 @@
+.item_chat {
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: #9d9fa3;
+}
+
+.btn_delete {
+    box-shadow: none;
+    background-color: transparent
+}

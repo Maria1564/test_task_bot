@@ -1,0 +1,25 @@
+.main {
+    margin: 20px 0;
+}
+
+.btn_panel {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.add,
+.search {
+    padding: 10px;
+    border: 1px solid var(--border-color);
+}
+
+.search {
+    background-color: transparent;
+}
+
+.list_chats {
+    border-top: 1px solid var(--border-color);
+    padding: 8px 0;
+}

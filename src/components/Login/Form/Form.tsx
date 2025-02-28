@@ -24,7 +24,7 @@ const Form: React.FC = () => {
       inpEmail.current.value = ""
       inpPassword.current.value = ""
 
-      navigate("/dashboard")
+      navigate("/dashboard", {replace: true})
     }
   };
 

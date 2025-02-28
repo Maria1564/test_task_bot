@@ -2,7 +2,7 @@ import React from "react";
 import style from "./Login.module.css";
 import close from "../../assets/close.png";
 import Form from "./Form";
-
+  
 const Login: React.FC = () => {
   return (
     <div className={style.login}>
