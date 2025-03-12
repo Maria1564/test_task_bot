@@ -19,7 +19,7 @@ const ChatContainer: React.FC = () => {
   }, [getMessages, idChat])
 
   
-
+  console.log(messages)
   return (
     <div className={style.chat}>
         <div className={style.messages}>

@@ -5,5 +5,7 @@ export const normalizeApiData = (data: IMessage[]): IMessage[] => {
     id: item.id,
     role: item.role,
     content: item.content,
+    model_id: item.model_id,
+    tokens: item.tokens
   })).reverse();
 };
