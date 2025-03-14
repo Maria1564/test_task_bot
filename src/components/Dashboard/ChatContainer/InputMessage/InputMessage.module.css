@@ -1,0 +1,28 @@
+.wrapper {
+    width: 100%;
+    position: relative;
+}
+
+.input {
+    width: 100%;
+    padding: 24px 72px 24px 20px;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.input::placeholder {
+    font-family: "IBM Plex Sans", sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.btn_send {
+    padding: 10px;
+    position: absolute;
+    right:  20px;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 1px 1px 2px 0px #6a88c3;
+}
