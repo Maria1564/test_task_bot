@@ -14,6 +14,7 @@ const InputMessage: React.FC = () => {
     
     if(idChat){
       addNewMess(idChat, inpValue)
+      setInpValue("")
     }
   }
 

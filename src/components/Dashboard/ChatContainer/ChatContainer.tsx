@@ -15,7 +15,6 @@ const ChatContainer: React.FC = () => {
 
   useEffect(()=> {
     if(idChat){
-
       getMessages(idChat)
     }
   }, [getMessages, idChat])
